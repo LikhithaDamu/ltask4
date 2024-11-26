@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Craft Store</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="todo.html">To-D0</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="todo-app">
+      <h2>Game Notes</h2>
+      <input type="text" id="todo-input" placeholder="Add a note...">
+      <button id="add-btn">Add</button>
+      <ul id="todo-list"></ul>
+    </section>
+  </main>
+  <script>
+    // Select elements
+    const todoInput = document.getElementById('todo-input');
+    const addBtn = document.getElementById('add-btn');
+    const todoList = document.getElementById('todo-list');
+
+    // Function to add a task
+    function addTask() {
+      const taskText = todoInput.value.trim();
+      if (taskText === '') {
+        alert('Please enter a task.');
+        return;
+      }
+
+      // Create a new list item
+      const li = document.createElement('li');
+      li.className = 'todo-item';
+
+      // Add task text
+      li.textContent = taskText;
+
+      // Create delete button
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = 'Delete';
+      deleteBtn.className = 'delete-btn';
+
+      // Delete functionality
+      deleteBtn.addEventListener('click', () => {
+        todoList.removeChild(li);
+      });
+
+      // Append delete button to the list item
+      li.appendChild(deleteBtn);
+
+      // Add list item to the task list
+      todoList.appendChild(li);
+
+      // Clear input field
+      todoInput.value = '';
+    }
+
+    // Attach event listener to the Add button
+    addBtn.addEventListener('click', addTask);
+  </script>
+</body>
+</html>

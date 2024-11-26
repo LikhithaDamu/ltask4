@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Craft Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Craft Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="todo.html">To-D0</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="products-section">
+        <h1>Our Products</h1>
+
+        <div class="filters">
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="all">All</option>
+                <option value="paint">Paint</option>
+                <option value="tools">Tools</option>
+                <option value="accessories">Accessories</option>
+            </select>
+
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+                <option value="price">Price</option>
+                <option value="rating">Rating</option>
+            </select>
+        </div>
+
+        <div class="product-listing">
+            <!-- Product items will be dynamically added here by JavaScript -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Craft Store | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

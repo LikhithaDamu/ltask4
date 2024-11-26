@@ -1,0 +1,128 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:black;
+}
+
+header {
+    background-color: #9933FF;
+    color: black;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color:  #9933FF;
+    color: #1909ae;
+    text-align: center;
+    padding: 1em;
+}
+
+.hero {
+    background-color: #cc0099;
+    text-align: center;
+    padding: 3em;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.btn {
+    display: inline-block;
+    background-color:black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.products-section {
+    padding: 2em;
+    background-color: #cc0099;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters select {
+    padding: 5px;
+    margin-right: 15px;
+}
+
+.product-listing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    width: 30%;
+    background-color:  hsl(195, 76%, 69%);
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact label {
+    font-weight: bold;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    font-size: 1em;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color:#cc3333;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+.delete-btn {
+    margin-left: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  
+  .delete-btn:hover {
+    background-color: darkred;
+  }
+  
+  .todo-item {
+    list-style: none;
+    margin: 10px 0;
+  }
